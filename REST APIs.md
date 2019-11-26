@@ -46,12 +46,12 @@ Response Type
 [Note] Token generated from Auth need to passed in 
 
 **Header** (Required)
-`
+```
 {
     PI-Authorization: < token_generated_after_auth >
 }
 
-`
+```
 
 **Request Payload Type** {JSON}
 
@@ -71,7 +71,7 @@ Response Type
 
 **Response Type**
 
-`
+```
 {
     "jsonrpc": "2.0",
     "signature": "rsa_sha256_pss:..........",
@@ -111,12 +111,26 @@ Response Type
     "id": 1
 }
 
-`
+```
 
 ### Request OTP
 
-*will be updated soon...*
+**Request Type : POST**
+`/validate/check`
+
+**Request Payload Type** {JSON}
+
+* "user":"username",
+* "realsm":"realmname",
+* "pass":"< pin >"
 
 ### OTP Validate
 
-*will be updated soon...*
+**Request Type : POST**
+`/validate/check`
+
+**Request Payload Type** {JSON}
+
+* "user":"username",
+* "realsm":"realmname",
+* "pass":"< pin + otp >"
