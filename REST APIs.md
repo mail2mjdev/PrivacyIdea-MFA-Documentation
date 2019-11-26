@@ -10,7 +10,7 @@
 
 Response Type
 
-`
+```
 {
     "jsonrpc": "2.0",
     "signature": "rsa_sha256_pss:........",
@@ -35,7 +35,7 @@ Response Type
     "id": 1
 }
 
-`
+```
 
 
 ### Token Init
