@@ -23,13 +23,8 @@ Response Type
     "result": {
         "status": true,
         "value": {
-            "dialog_no_token": false,
-            .
-            .
-            .
-            .
-            .
-
+            "dialog_no_token": false,........
+           
             "token_wizard": false,
             "token": "generated_token",
             "show_seed": false,
