@@ -1,14 +1,14 @@
 ## Setup and Configure SQLResolver
 
 **SQL Database**
-1. Setup & Install 
+1. Setup & Install MySQl in Ubuntu
     [Link](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04)
 
 2. Configure MySQL
     `sudo cat /etc/mysql/debian.cnf`
 
     File will have:
-    >host = 
+    >host = localhost
     >
     >user = debian-sys-maint
     >
