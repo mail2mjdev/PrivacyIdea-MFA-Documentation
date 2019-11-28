@@ -8,8 +8,10 @@
     `sudo cat /etc/mysql/debian.cnf`
 
     File will have:
-    >host = localhost
+    >host = 
+    >
     >user = debian-sys-maint
+    >
     >password = SqlUserpassword
 
     **Follow the steps below to reset the MySQL `root` user password:**
@@ -59,4 +61,5 @@
 
     **Save SQL Resolver**
     > To test click on the button __Test SQL Resolver__
+    >
     > If settings and DB Mapping is correct, It will return no of users present in the DB.
