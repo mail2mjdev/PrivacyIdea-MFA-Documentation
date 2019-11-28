@@ -1,10 +1,12 @@
 ## Setup and Configure SQLResolver
 
-**SQL Database**
+**MySQL Database**
 1. Setup & Install MySQl in Ubuntu
     [Link](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04)
 
-2. Configure MySQL
+2. Reset the MySQL `root` user password
+
+    **First**
     `sudo cat /etc/mysql/debian.cnf`
 
     File will have:
@@ -14,11 +16,11 @@
     >
     >password = SqlUserpassword
 
-    **Follow the steps below to reset the MySQL `root` user password:**
+    **Second**
 
     ```
     # mysql -u debian-sys-maint -p
-    Enter the password(enter)
+    Enter the password (Type the password you got from the above file and press enter)
 
     # mysql> USE mysql
     # mysql> UPDATE mysql.user SET Password=PASSWORD('NewSqlUserPassword') WHERE User='root';
@@ -27,7 +29,7 @@
     # mysql> EXIT;
 
     ```
-    **Create Database and Table (for using in MFA sqlresolver):**
+3. Create Database and Table (for using in MFA sqlresolver)
 
     ```
     # mysql> CREATE DATABASE mfadb;
@@ -46,7 +48,7 @@
 
     ```
 
-    **Create a new SQL Resolver**
+4. Create a new SQL Resolver
     
     * `Resolver name` : `AnyRosolverName`
     * `Driver`        : `mysql+pymsql`
@@ -62,4 +64,4 @@
     **Save SQL Resolver**
     > To test click on the button __Test SQL Resolver__
     >
-    > If settings and DB Mapping is correct, It will return no of users present in the DB.
+    > If settings and DB Mapping is correct, It will return number of users present in the DB.
