@@ -1,0 +1,13 @@
+Rollout url error ->
+
+AndroidManifest.xml -> within application tag put the below attrib: value pair
+
+android:usesCleartextTraffic="true"
+
+--------------------------------------------------------------
+Main Activity.java
+
+function onActivityResult() ->
+
+content = content.replace("%3A", ":"); //-- add this line
+Uri uri = Uri.parse(content);
